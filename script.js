@@ -3,13 +3,32 @@ let button = document.querySelector("button");
 let container = document.querySelector("#container");
 let color=document.querySelector("#color");
 let randColor=document.querySelector("#randColor");
+let eraser=document.querySelector("#eraser");
+
+
+let eraseMode=false;
+eraser.addEventListener("click",()=>{
+    eraseMode=!eraseMode;
+
+    if(eraseMode===true){
+        eraser.style.backgroundColor="red";
+    }else{
+        eraser.style.backgroundColor="";
+    }
+});
 
 let randMode=false;
 color.addEventListener("input",()=>{
     randMode=false;
+    randColor.style.backgroundColor="";
+    eraseMode=false;
+    eraser.style.backgroundColor="";
 });
 randColor.addEventListener("click",()=>{
     randMode=true;
+    randColor.style.backgroundColor="red";
+    eraseMode=false;
+    eraser.style.backgroundColor="";
 });
 
 function randomColor(){
@@ -44,13 +63,20 @@ button.addEventListener("click", () => {
             container.appendChild(box);
             
             box.addEventListener("mouseenter",()=>{
-                if(randMode===true){
-                    box.style.backgroundColor=`rgb(${randomColor()})`;
+
+                if(eraseMode===true){
+                    box.style.backgroundColor="white";
                 }
                 else{
-                    box.style.backgroundColor=color.value;
+                    if(randMode===true){
+                        box.style.backgroundColor=`rgb(${randomColor()})`;
+                    }
+                    else{
+                        box.style.backgroundColor=color.value;
+                    }
+                    
                 }
-                });
+            });
         }
     }
 });
