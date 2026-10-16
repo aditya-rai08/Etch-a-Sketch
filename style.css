@@ -46,8 +46,7 @@ button{
     width: 200px;
     height: 60px;
 }
-
-#randColor,#eraser{
+#randColor,#eraser,#clear{
     width: 60px;
     height: 60px;
 }

@@ -4,7 +4,7 @@ let container = document.querySelector("#container");
 let color=document.querySelector("#color");
 let randColor=document.querySelector("#randColor");
 let eraser=document.querySelector("#eraser");
-
+let clear=document.querySelector("#clear");
 
 let eraseMode=false;
 eraser.addEventListener("click",()=>{
@@ -62,6 +62,16 @@ button.addEventListener("click", () => {
 
             container.appendChild(box);
             
+            clear.addEventListener("click",()=>{
+                box.style.backgroundColor="";
+            });
+            clear.addEventListener("mousedown",()=>{
+                clear.style.backgroundColor="red";
+            });
+            clear.addEventListener("mouseup",()=>{
+                clear.style.backgroundColor="";
+            });
+
             box.addEventListener("mouseenter",()=>{
 
                 if(eraseMode===true){
