@@ -75,7 +75,7 @@ button.addEventListener("click", () => {
             box.addEventListener("mouseenter",()=>{
 
                 if(eraseMode===true){
-                    box.style.backgroundColor="white";
+                    box.style.backgroundColor="";
                 }
                 else{
                     if(randMode===true){
