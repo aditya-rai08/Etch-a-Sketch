@@ -1,5 +1,7 @@
 # 🎨 Etch-a-Sketch
 
+https://github.com/user-attachments/assets/4446fa67-5156-438e-a36b-98409f5eaac7
+
 A simple interactive Etch-a-Sketch drawing application built using **HTML, CSS, and JavaScript**. Draw on a customizable grid, experiment with colors, and create pixel-style artwork directly in your browser.
 
 ## ✨ Features
